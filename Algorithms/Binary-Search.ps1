@@ -1,7 +1,12 @@
 # this is the binary search algorithm in powershell
 function BinarySearch {
+    [CmdletBinding()]
     param(
+        [Parameter(Mandatory=$true)]
+        [ValidateNotNullOrEmpty()]
         [int[]]$array,
+        [Parameter(Mandatory=$true)]
+
         [int]$target
     )
     $low = 0
